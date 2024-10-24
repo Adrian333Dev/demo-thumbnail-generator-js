@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1f2937;
+  color: #e5e7eb;
+}
+
+/* Thumbnail image and preview area */
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.thumbnail-preview {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#preview-text {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+}
+
+.image-options,
+.customization-panel {
+  margin-bottom: 20px;
+}
+
+.image-thumbnails {
+  display: flex;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.thumbnail-preview {
+  position: relative;
+  width: 650px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.preview-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Thumbnail Text Styles */
+
+/* Base Style 1: Luxe Gold (Metallic effect) */
+.text-luxe {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffd700, #ffc700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 215, 0, 0.5);
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+/* Base Style 2: Futuristic Neon (Glow and bold style) */
+.text-neon {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(58, 255, 253, 0.9),
+    0 0 20px rgba(58, 255, 253, 0.8), 0 0 30px rgba(58, 255, 253, 0.6),
+    0 0 40px rgba(58, 255, 253, 0.4);
+  letter-spacing: 2px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* Base Style 3: Elegant Glass (Glassmorphism) */
+.text-glass {
+  font-family: 'Lora', serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Base Style 4: Vibrant Watercolor (Gradient blend) */
+.text-watercolor {
+  font-family: 'Dancing Script', cursive;
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(to right, #ff6a88, #ffc300, #ff5733, #daf7a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+
+/* Base Style 5: Retro 80s (Bold with vibrant colors) */
+.text-retro {
+  font-family: 'Press Start 2P', serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #ffd700;
+  text-shadow: -2px -2px 0 #ff6347, 2px 2px 0 #1e90ff, -2px 2px 0 #32cd32,
+    2px -2px 0 #ff69b4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#preview-text.text-left {
+  top: 50%;                     
+  left: 0;
+  transform: translate(0, -50%);
+  text-align: left;
+}
+
+#preview-text.text-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#preview-text.text-right {
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  text-align: right;
+}
+
+#preview-text.text-top {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+
+#preview-text.text-bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+
+#preview-text.text-topleft {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  text-align: left;
+}
+
+#preview-text.text-topright {
+  top: 0;
+  right: 0;
+  transform: translate(0, 0);
+  text-align: right;
+}
+
+#preview-text.text-bottomleft {
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 0);
+  text-align: left;
+}
+
+#preview-text.text-bottomright {
+  bottom: 0;
+  right: 0;
+  transform: translate(0, 0);
+  text-align: right;
+}
+
+/* Font Family Additions */
+.font-luxury {
+  font-family: 'Playfair Display', serif;
+}
+.font-modern {
+  font-family: 'Montserrat', sans-serif;
+}
+.font-futuristic {
+  font-family: 'Orbitron', sans-serif;
+}
+.font-handwriting {
+  font-family: 'Dancing Script', cursive;
+}
+.font-retro {
+  font-family: 'Press Start 2P', serif;
+}
+
+/* Font Size Variations (with more extremes) */
+.font-xxsmall {
+  font-size: 20px !important;
+}
+.font-xxlarge {
+  font-size: 40px !important;
+}
+.font-huge {
+  font-size: 60px !important;
+}
+
+/* Add New Font Weight Classes */
+.font-weight-extralight {
+  font-weight: 200;
+}
+.font-weight-extraheavy {
+  font-weight: 1000;
+}
+
+/* Add Ultra Bold Font Letter Spacing */
+.letter-spacing-ultrawide {
+  letter-spacing: 2.5px;
+}
+
+/* Gradient Neon Color */
+.text-gradient-neon {
+  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxe Metallic Color */
+.text-luxe-gold {
+  background: linear-gradient(135deg, #ffd700, #ffdf00, #ffc700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Soft Pastel Colors */
+.text-pastel-pink {
+  color: #f8bbd0;
+}
+.text-pastel-blue {
+  color: #bbdefb;
+}
+.text-pastel-yellow {
+  color: #fff9c4;
+}
+
+/* Dark and Vibrant */
+.text-dark-violet {
+  color: #8a2be2;
+}
+.text-dark-magenta {
+  color: #ff1493;
+}
+
+/* Metallic Silver */
+.text-metallic-silver {
+  background: linear-gradient(to right, #c0c0c0, #d3d3d3, #a9a9a9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Frosted Glass with Color */
+.bg-glass-frosted {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 10px 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+
+/* Neon Glowing Background */
+.bg-neon {
+  background: radial-gradient(
+    circle,
+    rgba(58, 255, 253, 0.2),
+    rgba(0, 0, 0, 0.8)
+  );
+  border: 2px solid rgba(58, 255, 253, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(58, 255, 253, 0.7);
+}
+
+/* Retro 80s Pattern */
+.bg-retro {
+  background: linear-gradient(
+    45deg,
+    #ff6347 25%,
+    #1e90ff 25%,
+    #1e90ff 50%,
+    #ff6347 50%,
+    #ff6347 75%,
+    #1e90ff 75%,
+    #1e90ff 100%
+  );
+  background-size: 56.57px 56.57px;
+  border: 2px solid #ff6347;
+  padding: 15px;
+}
+
+/* Luxurious Shadow (Subtle and Elegant) */
+.shadow-luxe {
+  text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.6),
+    2px 2px 10px rgba(255, 223, 0, 0.4);
+}
+
+/* Neon Multi-layer Shadow */
+.shadow-neon-glow {
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.7), 0 0 12px rgba(0, 255, 255, 0.5),
+    0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Thick Outline Shadow */
+.shadow-outline-thick {
+  text-shadow: -4px -4px 0 #ff6347, 4px 4px 0 #32cd32,
+    2px -2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Retro Glow Effect */
+.shadow-retro {
+  text-shadow: 2px 2px 0px #ff6347, 4px 4px 0px #32cd32,
+    6px 6px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Shimmer Text Effect */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}

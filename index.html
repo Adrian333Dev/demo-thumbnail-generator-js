@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thumbnail Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body data-bs-theme="dark">
+    <div class="container">
+      <div class="row">
+        <div class="col col-7">
+          <!-- Image Selection -->
+          <div class="image-options">
+            <h3>Select Image:</h3>
+            <div class="image-thumbnails">
+              <img
+                src="./images/1.jpeg"
+                alt="Image 1"
+                class="thumbnail"
+                onclick="updateImage('./images/1.jpeg')"
+              />
+              <img
+                src="./images/2.jpeg"
+                alt="Image 2"
+                class="thumbnail"
+                onclick="updateImage('./images/2.jpeg')"
+              />
+              <img
+                src="./images/chamellion.jpg"
+                alt="Image 3"
+                class="thumbnail"
+                onclick="updateImage('./images/chamellion.jpg')"
+              />
+              <img
+                src="./images/lake_bg.jpg"
+                alt="Image 4"
+                class="thumbnail"
+                onclick="updateImage('./images/lake_bg.jpg')"
+              />
+            </div>
+          </div>
+
+          <!-- Thumbnail Preview -->
+          <div class="thumbnail-preview">
+            <div id="preview-card" class="preview-card">
+              <img
+                id="preview-image"
+                src="./images/1.jpeg"
+                alt="Preview Image"
+              />
+              <h1 id="preview-text" class="text-retro text-bottom">Your Text Here</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col col-5">
+          <!-- Text Input and Customization -->
+          <h3>Customize Text:</h3>
+          <div class="mb-2">
+            <label for="thumbnail-text" class="form-label"
+              >Thumbnail Text</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="thumbnail-text"
+              placeholder="Enter text here"
+              oninput="updateText()"
+            />
+          </div>
+
+          <div class="mb-2">
+            <label for="position-select" class="form-label">Text Position</label>
+            <select
+              class="form-select"
+              id="position-select"
+              onchange="updatePosition()"
+            >
+              <option value="text-left">Left</option>
+              <option value="text-center">Center</option>
+              <option value="text-right">Right</option>
+              <option value="text-top">Top</option>
+              <option value="text-bottom">Bottom</option>
+              <option value="text-topleft">Top Left</option>
+              <option value="text-topright">Top Right</option>
+              <option value="text-bottomleft">Bottom Left</option>
+              <option value="text-bottomright">Bottom Right</option>
+            </select>
+          </div>
+
+          <div class="mb-2">
+            <label for="base-style-select" class="form-label">Base Style</label>
+            <select
+              class="form-select"
+              id="base-style-select"
+              onchange="updateBaseStyle()"
+            >
+              <option value="text-luxe">Luxe Gold (Metallic effect)</option>
+              <option value="text-neon">Orbitron (Glow and bold style)</option>
+              <option value="text-glass">Dancing Script (Glassmorphism)</option>
+              <option value="text-watercolor">
+                Montserrat (Vibrant Watercolor (Gradient blend))
+              </option>
+              <option value="text-retro">
+                Retro 80s (Bold with vibrant colors)
+              </option>
+            </select>
+          </div>
+
+          <div class="mb-2">
+            <label for="font-select" class="form-label">Font Style</label>
+            <select
+              class="form-select"
+              id="font-select"
+              onchange="updateFont()"
+            >
+              <option value="font-playfair">Playfair Display</option>
+              <option value="font-orbitron">Orbitron</option>
+              <option value="font-dancing">Dancing Script</option>
+              <option value="font-montserrat">Montserrat</option>
+            </select>
+          </div>
+
+          <div class="mb-2">
+            <label for="font-size-select" class="form-label">Font Size</label>
+            <select
+              class="form-select"
+              id="font-size-select"
+              onchange="updateFontSize()"
+            >
+              <option value="font-xxsmall">Small Text</option>
+              <option value="font-xxlarge">Medium Text</option>
+              <option value="font-huge">Large Text</option>
+            </select>
+          </div>
+
+          <div class="mb-2">
+            <label for="color-select" class="form-label">Text Color</label>
+            <select
+              class="form-select"
+              id="color-select"
+              onchange="updateTextColor()"
+            >
+              <option value="text-white">White</option>
+              <option value="text-primary">Primary</option>
+              <option value="text-danger">Red</option>
+              <option value="text-success">Green</option>
+              <option value="text-warning">Yellow</option>
+              <option value="text-info">Cyan</option>
+            </select>
+          </div>
+
+          <div class="mb-2">
+            <label for="shadow-select" class="form-label">Text Shadow</label>
+            <select
+              class="form-select"
+              id="shadow-select"
+              onchange="updateShadow()"
+            >
+              <option value="shadow-none">None</option>
+              <option value="shadow-sm">Small Shadow</option>
+              <option value="shadow">Medium Shadow</option>
+              <option value="shadow-lg">Large Shadow</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
